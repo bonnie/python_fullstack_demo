@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pets</title>
+  </head>
+  <body>
+    <h1>Our Pets</h1>
+    <table>
+      <tr><th>Name</th><th>Species</th></tr>
+      {% for pet in pets %}
+        <tr><td><a href="/pet/{{ pet.pet_id }}">{{ pet.pet_name }}</a></td><td>{{ pet.species.species_name }}</td></tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

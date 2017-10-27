@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Detail for {{ pet.pet_name }}</title>
+  </head>
+  <body>
+    <table>
+      <tr><td>Name:</td><td>{{ pet.pet_name }}</td>
+      <tr><td>Species:</td><td>{{ pet.species.species_name }}</td>
+      <tr><td>Birthdate:</td><td>{{ pet.born_at }}</td>
+  </table>
+  <h2>Owners</h2>
+  <ul>
+    {% for owner in pet.owners %}
+      <li>{{ owner.owner_name }}</li>
+    {% endfor %}
+  </ul>
+  </body>
+</html>
