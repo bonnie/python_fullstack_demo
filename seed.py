@@ -2,7 +2,9 @@
 
 from model import Pet, Species, Owner, connect_to_db, db
 
-def create_data(db):
+def create_data():
+    """Add species, pets, owners and relationships."""
+    
     tiger = Species(species_name='tiger')
     cat = Species(species_name='cat')
     dog = Species(species_name='dog')
@@ -39,4 +41,4 @@ if __name__ == '__main__':
     from server import app
 
     connect_to_db(app)
-    create_data(db)
+    create_data()
